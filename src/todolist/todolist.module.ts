@@ -1,3 +1,4 @@
+import { Storage } from './providers/storage';
 import { Todolist } from './providers/todolist';
 import { TodolistFooterClearButtonsComponent } from './components/todolist-footer-clear-buttons.compoennt';
 import { TodolistListInput } from './components/todolist-list-input.component';
@@ -11,6 +12,7 @@ import { TodolistHeaderComponent } from './components/todolist-header.component'
 import { TodolistComponent } from './components/todolist.component';
 import { NgModule } from '@angular/core';
 
+
 @NgModule({
     declarations:[
         TodolistComponent,
@@ -23,7 +25,7 @@ import { NgModule } from '@angular/core';
         TodolistFooterCounterComponent,
         TodolistFooterClearButtonsComponent
     ],
-    providers: [Todolist],
+    providers: [Todolist, Storage],
     imports: [BrowserModule],    
     exports: [TodolistComponent]
 })

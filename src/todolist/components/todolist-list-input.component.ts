@@ -4,10 +4,11 @@ import { Component } from '@angular/core';
 @Component({
     selector: 'todolist-list-input',
     template: `
-        <input type=text placeholder="add item ..." />
+        <input type='type' placeholder="text" />                 
     `
 })
 
 export class TodolistListInput {
 
+    
 }

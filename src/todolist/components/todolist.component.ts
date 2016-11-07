@@ -12,9 +12,5 @@ import { Component } from '@angular/core';
 })
 
 export class TodolistComponent {
-
-    constructor(todolist: Todolist){
-        console.log(todolist)     
-    }           
-
+               
 }
