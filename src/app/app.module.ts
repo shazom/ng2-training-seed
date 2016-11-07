@@ -1,11 +1,15 @@
+import { TodolistComponent } from './../todolist/components/todolist.component';
+import { TodoListModule } from './../todolist/todolist.module';
 import {NgModule} from "@angular/core";
-import {AppComponent} from "./app.component";
-import {BrowserModule} from "@angular/platform-browser";
 
 @NgModule({
-  declarations: [AppComponent],
-  imports     : [BrowserModule],
-  bootstrap   : [AppComponent]
+  imports  : [TodoListModule],
+  bootstrap: [TodolistComponent]
 })
 
-export class AppModule {}
+export class AppModule {
+
+  constructor() {
+  }
+
+}
