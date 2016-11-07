@@ -9,11 +9,7 @@ export class Todolist {
     private store: Storage;
 
     constructor(store: Storage){
-        this._items = [
-           new Item('first task'),
-           new Item('another task'),     
-        ];
-
+        this._items = [];
         this.store = store;
     }
 
