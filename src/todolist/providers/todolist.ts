@@ -18,7 +18,7 @@ export class Todolist {
     }    
 
     public addItem(title: string): void {
-        this._items.push(new Item(title));
+        this._items = [...this._items, new Item(title)];
         this.store.setItem('ITEMS', this._items);
     }
 
