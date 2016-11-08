@@ -1,13 +1,12 @@
 import { Item } from './../providers/item';
 import { Component, Input, ChangeDetectionStrategy } from '@angular/core';
 
-@Component({
-    changeDetection: ChangeDetectionStrategy.OnPush,
+@Component({    
     selector: 'todolist-list-items',
     template: `
         <ul>        
          <todolist-list-items-item 
-              *ngFor='let item of items'
+              *ngFor='let item of items | filterArr:"done":true'
               [item]='item'>
               
         </todolist-list-items-item>
@@ -19,6 +18,6 @@ import { Component, Input, ChangeDetectionStrategy } from '@angular/core';
 export class TodolistListItems {
 
     @Input()
-    public items: Item[];    
-
+    public items: Item[];        
+    
 } 

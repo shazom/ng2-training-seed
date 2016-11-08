@@ -1,14 +1,23 @@
-import { Component } from '@angular/core';
+import { Component, ViewEncapsulation, ChangeDetectionStrategy } from '@angular/core';
 
-@Component({
+@Component({    
     selector: 'todolist-header',
     template: `
-        <h1>TODOS</h1>
+
+        <div danger >TODOS</div>
+
+        <h2 *csIf="flag" >Hello</h2>
+
+      
      `
 })
 
 export class TodolistHeaderComponent {
 
-    
+    flag = false;
 
+    constructor(){
+        setTimeout( () => this.flag = true, 3000 )
+    }
+    
 }  

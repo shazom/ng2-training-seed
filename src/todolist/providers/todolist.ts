@@ -10,7 +10,7 @@ export class Todolist {
 
     constructor(store: Storage){
         this._items = [];
-        this.store = store;
+        this.store = store;        
     }
 
     get items(): Item[]{

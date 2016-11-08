@@ -6,12 +6,13 @@ import { Component, Input } from '@angular/core';
     template: `
         <li>
            <input type='checkbox' [checked]='item.done'/>
-           {{ item.title }}
+           {{ item.title | toUpper}}
+           <!-- {{ item.created }} -->
            <span>X</span> 
         </li>
     `
 })
 
 export class TodolistListItemsItemComponent {
-    @Input() item: Item;
+    @Input() item: Item; 
 } 

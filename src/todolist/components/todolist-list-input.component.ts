@@ -1,13 +1,14 @@
 import { TodolistListItems } from './todolist-list-items.compoennt';
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component, EventEmitter, Output, Input } from '@angular/core';
 
 @Component({
-    selector: 'todolist-list-input',
+    selector: 'todolist-list-input',    
     template: `
-        <input #itemBox 
+        <input #itemBox                
                (keydown.enter)="itemAdded.emit(itemBox.value)" 
                type='type' 
                placeholder="text" />
+                   
 
         <!-- <button (click)="itemAdded.emit(itemBox.value)" >add</button> -->                          
     `

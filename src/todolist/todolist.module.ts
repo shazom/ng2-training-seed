@@ -1,3 +1,7 @@
+import { DangerDirective } from './directives/danger.directive';
+import { CsIfDirective } from './directives/csIf.directive';
+import { FilterPipe } from './pipes/filter.pipe';
+import { ToUpperCasePipe } from './pipes/toUpperCase.pipe';
 import { Storage } from './providers/storage';
 import { Todolist } from './providers/todolist';
 import { TodolistFooterClearButtonsComponent } from './components/todolist-footer-clear-buttons.compoennt';
@@ -23,7 +27,11 @@ import { NgModule } from '@angular/core';
         TodolistListItems,
         TodolistListItemsItemComponent,
         TodolistFooterCounterComponent,
-        TodolistFooterClearButtonsComponent
+        TodolistFooterClearButtonsComponent,
+        ToUpperCasePipe,
+        FilterPipe,
+        CsIfDirective,
+        DangerDirective
     ],
     providers: [Todolist, Storage],
     imports: [BrowserModule],    
@@ -32,4 +40,5 @@ import { NgModule } from '@angular/core';
 
 export class TodoListModule {
 
+    
 }
