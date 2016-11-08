@@ -7,7 +7,6 @@ import { NgModule } from '@angular/core';
 
 @NgModule({
     declarations: [LoginComponent, InfoComponent, FormComponent],
-
     imports: [BrowserModule],
     exports: [LoginComponent]
 })
