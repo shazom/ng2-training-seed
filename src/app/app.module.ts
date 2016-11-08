@@ -1,3 +1,5 @@
+import { DangerDirective } from './../todolist/directives/danger.directive';
+import { routes } from './routes';
 import { AppComponent } from './app.component';
 import { LoginModule } from './../login/login.module';
 import { LoginComponent } from './../login/login.component';
@@ -9,7 +11,7 @@ import {RouterModule} from '@angular/router';
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [TodoListModule, LoginModule, RouterModule],
+  imports: [TodoListModule, LoginModule, RouterModule.forRoot(routes)],
   bootstrap: [AppComponent]
 })
 

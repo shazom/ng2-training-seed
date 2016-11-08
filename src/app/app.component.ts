@@ -4,8 +4,11 @@ import { Component } from '@angular/core';
 @Component({
     selector: 'app',
     template:`
-        <login></login>
-        <todolist></todolist>
+
+        <a [routerLink]="['login']">login</a>
+        <a [routerLink]="['todolist']">todolist</a>
+
+        <router-outlet></router-outlet>
     `
 })
 
