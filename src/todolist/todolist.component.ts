@@ -1,3 +1,4 @@
+import { Config } from './../app/app.constants';
 import { Logger } from './../shared/logger';
 import { Todolist } from './todolist.provider';
 import { Component } from '@angular/core';
@@ -25,7 +26,7 @@ export class TodolistComponent{
   constructor(todolist: Todolist) {    
     this.title = "todolist";
     this.placeholder = "Add item...";
-    this.todolist = todolist;        
+    this.todolist = todolist;            
   }
 
 } 

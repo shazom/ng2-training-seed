@@ -7,7 +7,8 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
     <li>
         <input type="checkbox" 
                 [checked]="item.done"/>
-        {{ item.title }}            
+        {{ item.title | agupper:'-' }}   
+        {{ item.created }}         
         <button (click)="itemClicked.emit(item)" >X</button>      
     </li>
     `
@@ -24,6 +25,4 @@ export class ItemComponent {
     constructor() {
         this.itemClicked = new EventEmitter();
     }
-
-
 }

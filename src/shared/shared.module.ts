@@ -1,8 +1,11 @@
+import { AgupperPipe } from './agupper.pipe';
 import { Logger } from './logger';
 import { NgModule } from '@angular/core';
 
 @NgModule({
-    providers: [Logger]
+    declarations: [AgupperPipe],
+    providers: [Logger], 
+    exports: [AgupperPipe]
 })
 
 export class SharedModule {

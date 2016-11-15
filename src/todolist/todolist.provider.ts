@@ -21,7 +21,12 @@ export class Todolist {
 
     public addItem(value: string): void {
         this._logger.log('item added');
-        this._items.push(new Item(value));
+        this._items.push({
+                title: value,
+                done: true,
+                created: new Date()
+            }
+        );
     }
 
     public removeItem(item: Item): void {

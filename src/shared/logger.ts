@@ -6,5 +6,4 @@ export class Logger {
     public log(value: string): void {
         console.log(`logger logged: ${value}`);
     }
-
 }
