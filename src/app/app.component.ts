@@ -1,10 +1,14 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from "@angular/core";
 
 @Component({
-    selector: 'app',
-    template:`<h1>Angular training seed</h1>`
+  selector: 'app',
+  template: `
+     <todolist></todolist>
+     <todolist></todolist>
+    `
 })
 
 export class AppComponent {
+
 
 }
