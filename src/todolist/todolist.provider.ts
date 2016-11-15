@@ -7,10 +7,12 @@ export class Todolist {
 
     private _items: Item[];
     private _logger: Logger;
+    private instanceMap = new Map();
+    private _item: Item;
 
     constructor(logger: Logger) {
         this._items = [];
-        this._logger = logger;
+        this._logger = logger;        
     }
 
     get items() {

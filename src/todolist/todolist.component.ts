@@ -4,8 +4,7 @@ import { Component } from '@angular/core';
 import { Item } from './item';
 
 @Component({
-    selector: 'todolist',
-    providers: [Todolist],
+    selector: 'todolist',    
     template: `
       <h1>{{ title }}</h1>
 
@@ -26,7 +25,7 @@ export class TodolistComponent{
   constructor(todolist: Todolist) {    
     this.title = "todolist";
     this.placeholder = "Add item...";
-    this.todolist = todolist;    
+    this.todolist = todolist;        
   }
 
 } 
