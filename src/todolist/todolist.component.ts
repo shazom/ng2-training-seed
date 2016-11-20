@@ -1,32 +1,38 @@
-import { Config } from './../app/app.constants';
-import { Logger } from './../shared/logger';
-import { Todolist } from './todolist.provider';
-import { Component } from '@angular/core';
-import { Item } from './item';
+import {Todolist} from "./todolist.provider";
+import {Component} from "@angular/core";
+import {Http} from "@angular/http";
+import {ActivatedRoute} from "@angular/router";
 
 @Component({
-    selector: 'todolist',    
-    template: `
-      <h1>{{ title }}</h1>
+  template: `
+      <h1>{{ title }} hello {{ name }}</h1>
 
         <input #itemInput type="text" [placeholder]="placeholder" />    
 
         <button (click)="todolist.addItem(itemInput.value)">add</button>
 
-        <items [list]="todolist.items"></items>
+        <items [list]="items"></items>
     `
 })
 
-export class TodolistComponent{
+export class TodolistComponent {
 
   private title: string;
   private placeholder: string;
   private todolist: Todolist;
+  private items: any[];
+  private server: Http;
+  private name: string;
 
-  constructor(todolist: Todolist) {    
-    this.title = "todolist";
+  constructor(todolist: Todolist, server: Http, route: ActivatedRoute) {
+    this.title       = "todolist";
     this.placeholder = "Add item...";
-    this.todolist = todolist;            
+    this.todolist    = todolist;
+    this.server      = server;
+    this.items       = [];
+
+    route.queryParams.subscribe( param => this.name = param.name)
+
   }
 
 } 

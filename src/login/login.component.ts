@@ -3,7 +3,6 @@ import {FormGroup, FormControl, Validators} from "@angular/forms";
 import {StringValidators} from "./string.validators";
 
 @Component({
-  selector: 'login',
   template: `
     <h2>Login</h2>
     <form [formGroup]="loginForm" (ngSubmit)="login()">
