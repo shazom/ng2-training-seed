@@ -1,12 +1,11 @@
-import { Component, OnInit } from "@angular/core";
+import {Component} from "@angular/core";
 
 @Component({
   selector: 'app',
   template: `
-     <todolist></todolist>  
+     <!--<todolist></todolist>  -->
+     <login></login>
     `
 })
 
-export class AppComponent {
-
-}
+export class AppComponent {}
